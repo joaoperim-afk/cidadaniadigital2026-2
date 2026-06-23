@@ -1,0 +1,215 @@
+:root {
+    --bg-color: #f7fafc;
+    --text-color: #2d3748;
+    --primary-color: #1a365d;
+    --secondary-color: #3182ce;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+    --blockquote-bg: #edf2f7;
+}
+
+body.dark-mode {
+    --bg-color: #1a202c;
+    --text-color: #edf2f7;
+    --primary-color: #90cdf4;
+    --secondary-color: #63b3ed;
+    --card-bg: #2d3748;
+    --border-color: #4a5568;
+    --blockquote-bg: #4a5568;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #1a365d;
+    color: white;
+    padding: 2.5rem 1rem;
+    text-align: center;
+}
+
+body.dark-mode header {
+    background-color: #0f172a;
+}
+
+.header-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#toggle-dark-mode {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+#toggle-dark-mode:hover {
+    transform: scale(1.05);
+}
+
+main {
+    max-width: 850px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.cards-container {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.card {
+    flex: 1;
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-top: 4px solid var(--secondary-color);
+}
+
+.card ul {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+/* Estilos da Nova Seção de Reportagem */
+.reportagem-conteudo p {
+    margin-bottom: 1.5rem;
+}
+
+.impacto-grade {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.impacto-item {
+    background-color: var(--bg-color);
+    padding: 1.2rem;
+    border-radius: 8px;
+    border-left: 4px solid #e53e3e;
+}
+
+.impacto-item h4 {
+    color: #e53e3e;
+    margin-bottom: 0.4rem;
+}
+
+body.dark-mode .impacto-item h4 {
+    color: #feb2b2;
+}
+
+.citacao {
+    background-color: var(--blockquote-bg);
+    border-left: 4px solid var(--secondary-color);
+    padding: 1rem;
+    font-style: italic;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+/* Estilização das cartas do Jogo */
+.jogo-card {
+    background-color: var(--bg-color);
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #a0aec0;
+}
+
+.caso-texto {
+    font-style: italic;
+    margin: 0.5rem 0 1rem 0;
+    color: #4a5568;
+}
+
+body.dark-mode .caso-texto {
+    color: #cbd5e0;
+}
+
+.radio-group {
+    margin: 0.6rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.radio-group label {
+    cursor: pointer;
+}
+
+#submit-btn {
+    background-color: #3182ce;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+#submit-btn:hover {
+    background-color: #1a365d;
+}
+
+#resultado-quiz {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.sucesso { background-color: #c6f6d5; color: #22543d; border: 1px solid #c6f6d5; }
+.atencao { background-color: #fed7d7; color: #742a2a; border: 1px solid #fed7d7; }
+.hidden { display: none; }
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+/* Responsividade com Flexbox */
+@media (max-width: 650px) {
+    .cards-container {
+        flex-direction: column;
+    }
+}
